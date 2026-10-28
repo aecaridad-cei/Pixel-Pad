@@ -470,6 +470,55 @@
         letter-spacing: 0;
       }
 
+      .site-footer {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        gap: 28px;
+        padding: 30px clamp(24px, 8vw, 120px);
+        border-top: 3px solid var(--ink);
+        background: var(--ink);
+        color: var(--paper);
+      }
+
+      .footer-brand {
+        margin: 0;
+        font-size: 1.05rem;
+        font-weight: 950;
+        letter-spacing: -0.05em;
+        white-space: nowrap;
+      }
+
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 10px 24px;
+      }
+
+      .footer-links a {
+        color: var(--paper);
+        font-size: 0.9rem;
+        font-weight: 750;
+        text-decoration-color: var(--violet);
+        text-decoration-thickness: 2px;
+        text-underline-offset: 5px;
+      }
+
+      .footer-links a:hover,
+      .footer-links a:focus-visible {
+        color: var(--acid);
+        outline-color: var(--acid);
+      }
+
+      .footer-copyright {
+        margin: 0;
+        color: #d7d1c1;
+        font-size: 0.78rem;
+        text-align: right;
+        white-space: nowrap;
+      }
+
       @media (max-width: 720px) {
         .site-header {
           min-height: 0;
@@ -532,6 +581,23 @@
           align-items: flex-start;
           flex-direction: column;
           gap: 13px;
+        }
+
+        .site-footer {
+          align-items: flex-start;
+          flex-direction: column;
+          gap: 18px;
+          padding: 28px clamp(22px, 7vw, 48px);
+        }
+
+        .footer-links {
+          justify-content: flex-start;
+          gap: 12px 20px;
+        }
+
+        .footer-copyright {
+          text-align: left;
+          white-space: normal;
         }
 
         .product-grid {
@@ -754,5 +820,16 @@
         </div>
       </section>
     </main>
+
+    <footer class="site-footer">
+      <p class="footer-brand">Pixel &amp; Pad</p>
+      <nav class="footer-links" aria-label="Enlaces de ayuda">
+        <a href="mailto:soporte@pixelandpad.example">Soporte técnico</a>
+        <a href="#garantia">Políticas de garantía</a>
+      </nav>
+      <p class="footer-copyright">
+        © 2026 Pixel &amp; Pad. Todos los derechos reservados.
+      </p>
+    </footer>
   </body>
 </html>
